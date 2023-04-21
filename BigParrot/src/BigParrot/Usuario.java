@@ -36,11 +36,7 @@ public class Usuario {
 
         lerPostagens();
     }
-    public void verSeguidores(){
-        for(Usuario user : seguindo){
-            System.out.println("Seguindo"+ user.getNome());
-        }
-    }
+
     @Override
     public String toString() {
         return "Usuario [postagens=" + postagens + ", seguindo=" + seguindo + ", nome=" + nome + "]";
