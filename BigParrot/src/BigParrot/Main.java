@@ -8,8 +8,17 @@ public class Main {
         Papagaio papagaio = new Papagaio();
 
         boolean sair = false;
+        String prompt =
+                "------------------------------\n" +
+                        "        Z É  C A R I O C A         \n" +
+                        "------------------------------\n" +
+                        "COMANDOS:\n" +
+                        "- Postar: <nomedousuario> -> <post>\n" +
+                        "- Ler: mural <nomedousuario>\n" +
+                        "- Seguir: <nomedousuario> segue <outrousuario>\n" +
+                        "*Novos usuarios sao criados ao postar e ao seguir\n";
+        System.out.println(prompt);
         while (!sair) {
-            System.out.println(" GRANDE PAPAGAIO ");
             String input = scan.nextLine();
             String[] inputDividido = input.split(" ");
 
@@ -36,24 +45,6 @@ public class Main {
                     papagaio.postar(usuario, mensagem);
                 }
 
-            else if(input.equals("listar"))  {
-                papagaio.listarUsuarios();
-                }
-
-            else if(input.equals("help")){
-                    String prompt =
-                            "------------------------------\n" +
-                            "        Z É  C A R I O C A         \n" +
-                            "------------------------------\n" +
-                            "COMANDOS:\n" +
-                            "- Postar: <nomedousuario> -> <post>\n" +
-                            "- Ler: mural <nomedousuario>\n" +
-                            "- Seguir: <nomedousuario> segue <outrousuario>\n" +
-                            "- Listar Usuário: 'listar'\n"   +
-                            "- Digite 'help' caso precise ver os comandos.\n"+
-                            "*Novos usuarios sao criados ao postar e ao seguir\n";
-                    System.out.println(prompt);
-                }
             } else {
                 if (input.equals("sair")) {
                     sair = true;
